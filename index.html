@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlenderStart — Complete Beginner Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Scroll progress -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar">
+    <div class="nav-logo">Blender<span>Start</span></div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#syllabus">Syllabus</a>
+      <a href="#start">Start</a>
+      <a href="#environment">Interface</a>
+      <a href="#mouse">Mouse</a>
+      <a href="#shortcuts">Shortcuts</a>
+      <a href="#saving">Saving</a>
+    </div>
+    <a href="#start" class="nav-cta">Begin Now</a>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-orb"></div>
+    <div class="hero-orb hero-orb--2"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Free · Open Source · Zero Experience Needed
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title__top">MASTER</span>
+        <span class="hero-title__main">BLENDER</span>
+        <span class="hero-title__sub">FROM SCRATCH</span>
+      </h1>
+      <p class="hero-desc">
+        The only guide you need. Keyboard shortcuts, mouse controls, interface breakdown,
+        syllabus, saving tips — everything a complete beginner needs in one place.
+      </p>
+      <div class="hero-btns">
+        <a href="#syllabus" class="btn btn--primary">View Syllabus →</a>
+        <a href="#shortcuts" class="btn btn--ghost">Shortcut Sheet</a>
+      </div>
+    </div>
+    <!-- Animated 3D cube -->
+    <div class="hero-cube-wrap">
+      <div class="hero-cube">
+        <div class="hero-cube__face hero-cube__face--front"></div>
+        <div class="hero-cube__face hero-cube__face--back"></div>
+        <div class="hero-cube__face hero-cube__face--left"></div>
+        <div class="hero-cube__face hero-cube__face--right"></div>
+        <div class="hero-cube__face hero-cube__face--top"></div>
+        <div class="hero-cube__face hero-cube__face--bottom"></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <div class="stats-bar">
+    <div class="stat-item reveal"><div class="stat-num">52+</div><div class="stat-label">Shortcuts</div></div>
+    <div class="stat-item reveal"><div class="stat-num">7</div><div class="stat-label">Modules</div></div>
+    <div class="stat-item reveal"><div class="stat-num">100%</div><div class="stat-label">Free Forever</div></div>
+    <div class="stat-item reveal"><div class="stat-num">0</div><div class="stat-label">Experience Needed</div></div>
+    <div class="stat-item reveal"><div class="stat-num">12</div><div class="stat-label">Weeks to ArchViz</div></div>
+  </div>
+
+  <!-- ===== SYLLABUS ===== -->
+  <section id="syllabus">
+    <div class="container">
+      <div class="section-label">Module 01</div>
+      <h2 class="section-title">YOUR LEARNING SYLLABUS</h2>
+      <p class="section-sub">6 focused modules taking you from absolute zero to photorealistic architectural renders — the highest-earning Blender skill.</p>
+      <div class="syllabus-grid">
+
+        <div class="syl-card reveal" data-color="orange">
+          <div class="syl-week">Week 1 – 2</div>
+          <div class="syl-icon">🖥️</div>
+          <h3 class="syl-title">Interface & Navigation</h3>
+          <p class="syl-desc">Learn to navigate the Blender viewport, understand every panel, and move around a 3D scene confidently without getting lost.</p>
+          <div class="syl-tags">
+            <span class="tag">Viewport</span><span class="tag">MMB Orbit</span><span class="tag">Numpad Views</span><span class="tag">Panels</span>
+          </div>
+        </div>
+
+        <div class="syl-card reveal" data-color="blue">
+          <div class="syl-week">Week 3 – 4</div>
+          <div class="syl-icon">📦</div>
+          <h3 class="syl-title">3D Modeling Basics</h3>
+          <p class="syl-desc">Build 3D objects from scratch using Edit Mode. Learn to extrude walls, add loop cuts, bevel edges, and shape geometry precisely.</p>
+          <div class="syl-tags">
+            <span class="tag">Edit Mode</span><span class="tag">Extrude</span><span class="tag">Loop Cut</span><span class="tag">Bevel</span>
+          </div>
+        </div>
+
+        <div class="syl-card reveal" data-color="green">
+          <div class="syl-week">Week 5 – 6</div>
+          <div class="syl-icon">🎨</div>
+          <h3 class="syl-title">Materials & Textures</h3>
+          <p class="syl-desc">Make objects look real with physically accurate PBR materials — wood, concrete, glass, metal, fabric. Download free textures from Polyhaven.</p>
+          <div class="syl-tags">
+            <span class="tag">Shader Editor</span><span class="tag">PBR</span><span class="tag">Textures</span><span class="tag">Polyhaven</span>
+          </div>
+        </div>
+
+        <div class="syl-card reveal" data-color="purple">
+          <div class="syl-week">Week 7 – 8</div>
+          <div class="syl-icon">💡</div>
+          <h3 class="syl-title">Lighting & HDRI</h3>
+          <p class="syl-desc">The most important skill for ArchViz. Learn sun lighting, HDRI environments, area lights, and IES bulbs to achieve photorealism.</p>
+          <div class="syl-tags">
+            <span class="tag">HDRI</span><span class="tag">Sun Light</span><span class="tag">Area Lights</span><span class="tag">IES</span>
+          </div>
+        </div>
+
+        <div class="syl-card reveal" data-color="yellow">
+          <div class="syl-week">Week 9 – 10</div>
+          <div class="syl-icon">📸</div>
+          <h3 class="syl-title">Rendering with Cycles</h3>
+          <p class="syl-desc">Produce your first photorealistic 4K render using Blender's ray-tracing Cycles engine powered by your RTX GPU.</p>
+          <div class="syl-tags">
+            <span class="tag">Cycles</span><span class="tag">GPU Render</span><span class="tag">Denoising</span><span class="tag">4K Output</span>
+          </div>
+        </div>
+
+        <div class="syl-card reveal" data-color="red">
+          <div class="syl-week">Week 11 – 12</div>
+          <div class="syl-icon">🎬</div>
+          <h3 class="syl-title">Animation & Camera</h3>
+          <p class="syl-desc">Create camera walkthroughs, set keyframes, and export a video fly-through. This skill doubles your freelance rates instantly.</p>
+          <div class="syl-tags">
+            <span class="tag">Keyframes</span><span class="tag">Camera Path</span><span class="tag">MP4 Export</span><span class="tag">Timeline</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW TO START ===== -->
+  <section id="start">
+    <div class="container">
+      <div class="section-label">Module 02</div>
+      <h2 class="section-title">HOW TO START TODAY</h2>
+      <p class="section-sub">7 exact steps from first install to your first render. Follow in order — don't skip any step.</p>
+      <div class="steps-list">
+
+        <div class="step reveal">
+          <div class="step__num">01</div>
+          <div class="step__body">
+            <h3 class="step__title">Download & Install Blender</h3>
+            <p class="step__desc">Go to <strong class="accent">blender.org</strong> and download the latest stable version. Completely free. Install like any normal software. Never download from third-party sites.</p>
+            <div class="step__tip">💡 blender.org → Download → Latest Stable Release</div>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step__num">02</div>
+          <div class="step__body">
+            <h3 class="step__title">Enable GPU Rendering — Critical!</h3>
+            <p class="step__desc">Go to <strong>Edit → Preferences → System → Cycles Render Devices</strong>. Select <strong>OptiX</strong> and tick your RTX GPU. This makes rendering 8–10x faster. Do this before anything else.</p>
+            <div class="step__tip">💡 Edit → Preferences → System → OptiX → tick GPU → Save Preferences</div>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step__num">03</div>
+          <div class="step__body">
+            <h3 class="step__title">Spend 2 Days on Navigation Only</h3>
+            <p class="step__desc">Don't jump into modeling yet. Spend two full days just moving around the viewport. Orbit, zoom, pan. Open the default scene and practice until navigation feels natural.</p>
+            <div class="step__tip">💡 MMB = orbit · Scroll = zoom · Shift+MMB = pan · Num0 = camera view</div>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step__num">04</div>
+          <div class="step__body">
+            <h3 class="step__title">Complete the Donut Tutorial — Non-Negotiable</h3>
+            <p class="step__desc">Search YouTube for <strong class="accent">"Blender Guru Donut Tutorial"</strong>. This 14-part free series teaches modeling, shading, lighting, and rendering in one complete project. Always have Blender open while watching — pause and copy every single step.</p>
+            <div class="step__tip">💡 Never just watch — always have Blender open and follow along simultaneously</div>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step__num">05</div>
+          <div class="step__body">
+            <h3 class="step__title">Install BlenderKit for Free Assets</h3>
+            <p class="step__desc">BlenderKit gives you thousands of free furniture, materials, and plants. Go to blenderkit.com and follow the install guide. This means you don't need to model every chair and sofa from scratch.</p>
+            <div class="step__tip">💡 Edit → Preferences → Add-ons → Install → search BlenderKit → enable it</div>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step__num">06</div>
+          <div class="step__body">
+            <h3 class="step__title">Build Your First Room</h3>
+            <p class="step__desc">Create a simple box room: 4 walls, floor, ceiling. Cut window holes with Inset + Extrude. Import BlenderKit furniture. Add a free HDRI from Polyhaven.com for sky lighting. This is your first portfolio piece.</p>
+            <div class="step__tip">💡 Target: complete your first room render within 30 days of starting Blender</div>
+          </div>
+        </div>
+
+        <div class="step reveal">
+          <div class="step__num">07</div>
+          <div class="step__body">
+            <h3 class="step__title">Press F12 — Your First Render!</h3>
+            <p class="step__desc">In Render Properties, set Device to GPU Compute. Set samples to 128. Press <strong class="accent">F12</strong> and watch your RTX create photorealistic light. Then save immediately: <strong>Image → Save As → PNG</strong> from the render window.</p>
+            <div class="step__tip">💡 F12 = start render · Image → Save As = save result · Don't close without saving!</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ENVIRONMENT ===== -->
+  <section id="environment">
+    <div class="container">
+      <div class="section-label">Module 03</div>
+      <h2 class="section-title">THE BLENDER INTERFACE</h2>
+      <p class="section-sub">Know every panel before you start building. Hover each zone to learn what it does.</p>
+
+      <div class="env-diagram reveal">
+        <div class="env-diagram__label">BLENDER 4.x VIEWPORT LAYOUT</div>
+        <div class="env-layout">
+          <div class="env-zone env-zone--header">
+            <span class="env-zone__name">📋 TOPBAR</span>
+            <span class="env-zone__desc">File · Edit · Render · Window · Help menus + current Mode selector</span>
+          </div>
+          <div class="env-row">
+            <div class="env-zone env-zone--toolbar">
+              <span class="env-zone__name">🛠️ TOOLBAR</span>
+              <span class="env-zone__desc">Press T. Move, Rotate, Scale, Annotate tools</span>
+            </div>
+            <div class="env-zone env-zone--viewport">
+              <div class="env-cube-wrap">
+                <div class="env-cube">
+                  <div class="env-cube__face env-cube__face--front"></div>
+                  <div class="env-cube__face env-cube__face--back"></div>
+                  <div class="env-cube__face env-cube__face--left"></div>
+                  <div class="env-cube__face env-cube__face--right"></div>
+                  <div class="env-cube__face env-cube__face--top"></div>
+                  <div class="env-cube__face env-cube__face--bottom"></div>
+                </div>
+              </div>
+              <span class="env-zone__name">🌐 3D VIEWPORT</span>
+              <span class="env-zone__desc">Your main workspace. Everything you build lives here.</span>
+            </div>
+            <div class="env-zone env-zone--sidebar">
+              <span class="env-zone__name">⚙️ N-PANEL</span>
+              <span class="env-zone__desc">Press N. Exact XYZ position, rotation, scale values</span>
+            </div>
+          </div>
+          <div class="env-zone env-zone--footer">
+            <span class="env-zone__name">🎬 TIMELINE · OUTLINER · PROPERTIES</span>
+            <span class="env-zone__desc">Bottom: animation timeline · Top-right: scene outliner · Right panel: render, material, modifier settings</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode cards -->
+      <div class="mode-grid">
+        <div class="mode-card reveal" style="--mode-color: var(--orange)">
+          <div class="mode-card__icon">🟠</div>
+          <h4 class="mode-card__title">Object Mode</h4>
+          <p class="mode-card__desc">Default mode. Move, scale, rotate whole objects. Press Tab to switch to Edit Mode.</p>
+        </div>
+        <div class="mode-card reveal" style="--mode-color: var(--blue)">
+          <div class="mode-card__icon">🔵</div>
+          <h4 class="mode-card__title">Edit Mode</h4>
+          <p class="mode-card__desc">Press Tab. Edit the actual mesh — vertices, edges, faces. This is where you build and shape geometry.</p>
+        </div>
+        <div class="mode-card reveal" style="--mode-color: var(--purple)">
+          <div class="mode-card__icon">🟣</div>
+          <h4 class="mode-card__title">Sculpt Mode</h4>
+          <p class="mode-card__desc">Paint and sculpt organic shapes like clay. Great for terrain, character details, organic bumps.</p>
+        </div>
+        <div class="mode-card reveal" style="--mode-color: var(--green)">
+          <div class="mode-card__icon">🟢</div>
+          <h4 class="mode-card__title">Rendered View</h4>
+          <p class="mode-card__desc">Press Z → Rendered. See a live GPU render preview in the viewport. Heavy on your GPU but beautiful.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MOUSE ===== -->
+  <section id="mouse">
+    <div class="container">
+      <div class="section-label">Module 04</div>
+      <h2 class="section-title">MOUSE CONTROLS</h2>
+      <p class="section-sub">Blender is built around a 3-button mouse. Every button has a distinct, critical purpose. Master these before shortcuts.</p>
+      <div class="mouse-grid">
+
+        <div class="mouse-card reveal">
+          <div class="mouse-card__icon">👆</div>
+          <div class="mouse-card__content">
+            <h4 class="mouse-card__action">Left Click</h4>
+            <p class="mouse-card__desc">Select objects. Click empty space to deselect. This places your 3D cursor when used in empty viewport.</p>
+            <span class="mouse-card__key">LMB = Select</span>
+          </div>
+        </div>
+
+        <div class="mouse-card reveal">
+          <div class="mouse-card__icon">👉</div>
+          <div class="mouse-card__content">
+            <h4 class="mouse-card__action">Right Click</h4>
+            <p class="mouse-card__desc">Opens context menu with quick actions like Shade Smooth, Set Origin, and object operations.</p>
+            <span class="mouse-card__key">RMB = Context Menu</span>
+          </div>
+        </div>
+
+        <div class="mouse-card reveal">
+          <div class="mouse-card__icon">🔘</div>
+          <div class="mouse-card__content">
+            <h4 class="mouse-card__action">Middle Mouse (Hold + Drag)</h4>
+            <p class="mouse-card__desc">ORBIT — rotate your view around the scene. The single most used navigation action. Hold and drag in any direction.</p>
+            <span class="mouse-card__key">MMB drag = Orbit</span>
+          </div>
+        </div>
+
+        <div class="mouse-card reveal">
+          <div class="mouse-card__icon">🖱️</div>
+          <div class="mouse-card__content">
+            <h4 class="mouse-card__action">Scroll Wheel</h4>
+            <p class="mouse-card__desc">Zoom in and out. Scroll towards an object to zoom in, away to zoom out. Works in all views.</p>
+            <span class="mouse-card__key">Scroll = Zoom</span>
+          </div>
+        </div>
+
+        <div class="mouse-card reveal">
+          <div class="mouse-card__icon">⇧</div>
+          <div class="mouse-card__content">
+            <h4 class="mouse-card__action">Shift + Middle Mouse</h4>
+            <p class="mouse-card__desc">PAN the view — slide left, right, up, down without rotating. Hold Shift while dragging MMB.</p>
+            <span class="mouse-card__key">Shift + MMB = Pan</span>
+          </div>
+        </div>
+
+        <div class="mouse-card reveal">
+          <div class="mouse-card__icon">⌃</div>
+          <div class="mouse-card__content">
+            <h4 class="mouse-card__action">Ctrl + Middle Mouse</h4>
+            <p class="mouse-card__desc">Smooth zoom. Alternative to scroll when you need more precise zoom control on detailed scenes.</p>
+            <span class="mouse-card__key">Ctrl + MMB = Smooth Zoom</span>
+          </div>
+        </div>
+
+        <div class="mouse-card reveal">
+          <div class="mouse-card__icon">⇧</div>
+          <div class="mouse-card__content">
+            <h4 class="mouse-card__action">Shift + Left Click</h4>
+            <p class="mouse-card__desc">Add objects to selection. Hold Shift and click multiple objects to select them all simultaneously.</p>
+            <span class="mouse-card__key">Shift + LMB = Multi-select</span>
+          </div>
+        </div>
+
+        <div class="mouse-card reveal">
+          <div class="mouse-card__icon">⎇</div>
+          <div class="mouse-card__content">
+            <h4 class="mouse-card__action">Alt + Left Click (Edit Mode)</h4>
+            <p class="mouse-card__desc">Select an entire edge loop in one click. Extremely powerful for selecting walls, door frames, floor edges.</p>
+            <span class="mouse-card__key">Alt + LMB = Loop Select</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="info-banner info-banner--orange reveal">
+        <div class="info-banner__icon">💡</div>
+        <div>
+          <strong>No Middle Mouse Button on Your Laptop?</strong>
+          <p>Go to Edit → Preferences → Input → enable "Emulate 3 Button Mouse". Then Alt + Left Click acts as Middle Mouse. Works perfectly on all laptop touchpads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SHORTCUTS ===== -->
+  <section id="shortcuts">
+    <div class="container">
+      <div class="section-label">Module 05</div>
+      <h2 class="section-title">KEYBOARD SHORTCUTS</h2>
+      <p class="section-sub">Every shortcut explained with what it does AND why you need it. Start with Basics — expand from there.</p>
+
+      <div class="shortcut-tabs">
+        <button class="tab-btn active" data-tab="basics">🟠 Basics</button>
+        <button class="tab-btn" data-tab="navigation">🔵 Navigation</button>
+        <button class="tab-btn" data-tab="editing">🔴 Edit Mode</button>
+        <button class="tab-btn" data-tab="selection">🟢 Selection</button>
+        <button class="tab-btn" data-tab="render">🟡 Render</button>
+        <button class="tab-btn" data-tab="view">🟣 View</button>
+      </div>
+
+      <div class="shortcut-panel active" id="panel-basics">
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">G</span></div><div class="sc-info"><h4 class="sc-name">Grab / Move</h4><p class="sc-desc">Move selected object freely. After G → press X, Y, or Z to constrain to that axis.</p><span class="sc-why">Most used key. You'll press this 100x per session.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">S</span></div><div class="sc-info"><h4 class="sc-name">Scale / Resize</h4><p class="sc-desc">Resize the selected object. S → X/Y/Z to scale on one axis only.</p><span class="sc-why">Resize walls, furniture, any object instantly.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">R</span></div><div class="sc-info"><h4 class="sc-name">Rotate</h4><p class="sc-desc">Rotate object. R → Z → 90 rotates exactly 90° on the Z axis.</p><span class="sc-why">Rotate furniture, align walls, spin cameras.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Ctrl</span><span class="key-plus">+</span><span class="key key--hot">Z</span></div><div class="sc-info"><h4 class="sc-name">Undo</h4><p class="sc-desc">Undo the last action. Unlimited undo steps available.</p><span class="sc-why">Your safety net. Use it constantly — no shame!</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Ctrl</span><span class="key-plus">+</span><span class="key key--hot">S</span></div><div class="sc-info"><h4 class="sc-name">Save File</h4><p class="sc-desc">Save your entire .blend project file.</p><span class="sc-why">Press this every 10 minutes. Blender can crash on heavy scenes.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Shift</span><span class="key-plus">+</span><span class="key key--hot">A</span></div><div class="sc-info"><h4 class="sc-name">Add Object</h4><p class="sc-desc">Opens the Add menu. Add meshes, lights, cameras, empties.</p><span class="sc-why">Everything in your scene starts from this single menu.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">Tab</span></div><div class="sc-info"><h4 class="sc-name">Toggle Edit Mode</h4><p class="sc-desc">Switch between Object Mode and Edit Mode.</p><span class="sc-why">Edit Mode is where you build and reshape geometry.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">X</span></div><div class="sc-info"><h4 class="sc-name">Delete</h4><p class="sc-desc">Delete selected object or geometry with a confirm popup.</p><span class="sc-why">Quick cleanup — popup prevents accidental deletion.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Shift</span><span class="key-plus">+</span><span class="key key--hot">D</span></div><div class="sc-info"><h4 class="sc-name">Duplicate</h4><p class="sc-desc">Copy selected object. Then move with mouse. Enter to confirm.</p><span class="sc-why">Duplicate chairs, lights, windows in one keystroke.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Alt</span><span class="key-plus">+</span><span class="key key--hot">D</span></div><div class="sc-info"><h4 class="sc-name">Linked Duplicate</h4><p class="sc-desc">Duplicate but share same mesh data — change one, change all.</p><span class="sc-why">Perfect for repeating identical furniture across a room.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Ctrl</span><span class="key-plus">+</span><span class="key key--hot">A</span></div><div class="sc-info"><h4 class="sc-name">Apply Transforms</h4><p class="sc-desc">Bake Scale / Rotation / Location into the object data.</p><span class="sc-why">Always apply scale before UV unwrapping or rendering!</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Ctrl</span><span class="key-plus">+</span><span class="key key--hot">J</span></div><div class="sc-info"><h4 class="sc-name">Join Objects</h4><p class="sc-desc">Merge multiple selected objects into one single object.</p><span class="sc-why">Combine all room parts into one clean object for exporting.</span></div></div>
+      </div>
+
+      <div class="shortcut-panel" id="panel-navigation">
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">Num 0</span></div><div class="sc-info"><h4 class="sc-name">Camera View</h4><p class="sc-desc">See exactly what your camera sees before rendering.</p><span class="sc-why">Essential before every F12 render — preview your composition.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">Num 1</span></div><div class="sc-info"><h4 class="sc-name">Front View</h4><p class="sc-desc">Snap to front orthographic view.</p><span class="sc-why">Precise side-on positioning of walls and objects.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">Num 7</span></div><div class="sc-info"><h4 class="sc-name">Top View</h4><p class="sc-desc">Bird's-eye floor plan view of your scene.</p><span class="sc-why">Essential for room layout — like drawing a floor plan.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">Num 3</span></div><div class="sc-info"><h4 class="sc-name">Side View</h4><p class="sc-desc">Right-side orthographic view.</p><span class="sc-why">Check wall heights and vertical proportions.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">Num 5</span></div><div class="sc-info"><h4 class="sc-name">Perspective / Ortho</h4><p class="sc-desc">Toggle between 3D perspective and flat orthographic view.</p><span class="sc-why">Ortho for precision modelling, Perspective for visual check.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">Num .</span></div><div class="sc-info"><h4 class="sc-name">Focus Selected</h4><p class="sc-desc">Center the view on whatever is selected.</p><span class="sc-why">Use this when you "lose" an object in the scene!</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">Num /</span></div><div class="sc-info"><h4 class="sc-name">Local / Isolate View</h4><p class="sc-desc">Hide everything except the selected object. Press again to exit.</p><span class="sc-why">Focus on editing one object without visual clutter.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">~</span></div><div class="sc-info"><h4 class="sc-name">View Pie Menu</h4><p class="sc-desc">Quick access popup to all camera view angles at once.</p><span class="sc-why">Faster than memorizing all numpad combinations.</span></div></div>
+      </div>
+
+      <div class="shortcut-panel" id="panel-editing">
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">E</span></div><div class="sc-info"><h4 class="sc-name">Extrude</h4><p class="sc-desc">Pull out new geometry from faces, edges, or vertices.</p><span class="sc-why">How you build walls, columns, roofs — the most used Edit Mode key.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Ctrl</span><span class="key-plus">+</span><span class="key key--hot">R</span></div><div class="sc-info"><h4 class="sc-name">Loop Cut</h4><p class="sc-desc">Add a new edge loop. Hover mesh → scroll to add more cuts → click to place.</p><span class="sc-why">Add detail exactly where needed without extra polygons elsewhere.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">I</span></div><div class="sc-info"><h4 class="sc-name">Inset Face</h4><p class="sc-desc">Create a smaller face inside a selected face. Pull inward.</p><span class="sc-why">Create window holes, door frames, wall insets, ceiling panels.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Ctrl</span><span class="key-plus">+</span><span class="key key--hot">B</span></div><div class="sc-info"><h4 class="sc-name">Bevel</h4><p class="sc-desc">Round off sharp edges. Scroll to add more bevel segments.</p><span class="sc-why">Makes furniture look real and physical — not sharp and plastic.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">K</span></div><div class="sc-info"><h4 class="sc-name">Knife Tool</h4><p class="sc-desc">Cut custom edges anywhere on mesh. Click to place cuts, Enter to confirm.</p><span class="sc-why">Create custom window shapes or diagonal architectural cuts.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">F</span></div><div class="sc-info"><h4 class="sc-name">Fill Face</h4><p class="sc-desc">Select 3+ edges or vertices and press F to fill with a new face.</p><span class="sc-why">Close holes and gaps in your mesh instantly.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">M</span></div><div class="sc-info"><h4 class="sc-name">Merge Vertices</h4><p class="sc-desc">Merge selected vertices together. "At Center" is most common option.</p><span class="sc-why">Clean up mesh — remove doubles, weld overlapping vertices.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">1</span><span class="key key--hot">2</span><span class="key key--hot">3</span></div><div class="sc-info"><h4 class="sc-name">Vertex / Edge / Face Mode</h4><p class="sc-desc">Switch selection type in Edit Mode. 1=Vertices, 2=Edges, 3=Faces.</p><span class="sc-why">Switch between these constantly while modeling any structure.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">O</span></div><div class="sc-info"><h4 class="sc-name">Proportional Editing</h4><p class="sc-desc">Move vertices with a smooth falloff radius. Scroll to change size.</p><span class="sc-why">Create smooth terrain, curved roofs, organic shapes effortlessly.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Alt</span><span class="key-plus">+</span><span class="key key--hot">Click</span></div><div class="sc-info"><h4 class="sc-name">Select Edge Loop</h4><p class="sc-desc">Click any edge to select the entire surrounding loop.</p><span class="sc-why">Select entire walls, floor edges, door frames in one click.</span></div></div>
+      </div>
+
+      <div class="shortcut-panel" id="panel-selection">
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">A</span></div><div class="sc-info"><h4 class="sc-name">Select All / Deselect All</h4><p class="sc-desc">Press once to select everything. Press again to deselect everything.</p><span class="sc-why">Quick total select or clean slate with a single key.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">B</span></div><div class="sc-info"><h4 class="sc-name">Box Select</h4><p class="sc-desc">Drag a rectangle to select all objects or geometry inside it.</p><span class="sc-why">Select entire sections of a room or multiple objects at once.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">C</span></div><div class="sc-info"><h4 class="sc-name">Circle Select</h4><p class="sc-desc">Paint selection with a circular brush. Scroll to resize brush.</p><span class="sc-why">Select organic regions of vertices in Edit Mode smoothly.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Ctrl</span><span class="key-plus">+</span><span class="key key--hot">I</span></div><div class="sc-info"><h4 class="sc-name">Invert Selection</h4><p class="sc-desc">Flip the selection — selected becomes deselected and vice versa.</p><span class="sc-why">Select "everything except this object" technique.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Shift</span><span class="key-plus">+</span><span class="key key--hot">Click</span></div><div class="sc-info"><h4 class="sc-name">Add to Selection</h4><p class="sc-desc">Hold Shift and click multiple objects to build a multi-selection.</p><span class="sc-why">Select chair + table + lamp together before moving or grouping.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Ctrl</span><span class="key-plus">+</span><span class="key key--hot">Click</span></div><div class="sc-info"><h4 class="sc-name">Select Shortest Path</h4><p class="sc-desc">In Edit Mode — selects the shortest path between two vertices/edges.</p><span class="sc-why">Great for selecting specific edge rows or creating clean loops.</span></div></div>
+      </div>
+
+      <div class="shortcut-panel" id="panel-render">
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">F12</span></div><div class="sc-info"><h4 class="sc-name">Render Image 🎨</h4><p class="sc-desc">Start the final render. Your GPU kicks in and photorealism begins.</p><span class="sc-why">The most satisfying key in Blender. Your goal every session.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Ctrl</span><span class="key-plus">+</span><span class="key key--hot">F12</span></div><div class="sc-info"><h4 class="sc-name">Render Animation</h4><p class="sc-desc">Render all frames as a complete video sequence.</p><span class="sc-why">For architectural walkthroughs — your premium freelance offering.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">F11</span></div><div class="sc-info"><h4 class="sc-name">View Last Render</h4><p class="sc-desc">Reopen the last rendered image without re-rendering.</p><span class="sc-why">Review results and compare with previous version.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">Space</span></div><div class="sc-info"><h4 class="sc-name">Play Animation</h4><p class="sc-desc">Play or pause animation preview in the viewport.</p><span class="sc-why">Preview camera motion before committing to a full render.</span></div></div>
+      </div>
+
+      <div class="shortcut-panel" id="panel-view">
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">Z</span></div><div class="sc-info"><h4 class="sc-name">Shading Pie Menu</h4><p class="sc-desc">Switch between Wireframe, Solid, Material Preview, Rendered views.</p><span class="sc-why">Toggle render preview instantly — use constantly during work.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">H</span></div><div class="sc-info"><h4 class="sc-name">Hide Selected</h4><p class="sc-desc">Hide selected objects from the viewport temporarily.</p><span class="sc-why">See inside rooms while modeling by hiding outer walls.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key">Alt</span><span class="key-plus">+</span><span class="key key--hot">H</span></div><div class="sc-info"><h4 class="sc-name">Unhide All</h4><p class="sc-desc">Reveal all hidden objects in the scene at once.</p><span class="sc-why">Restore everything you hid while modelling interior details.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">N</span></div><div class="sc-info"><h4 class="sc-name">N-Panel Sidebar</h4><p class="sc-desc">Toggle right sidebar showing exact XYZ values and item properties.</p><span class="sc-why">Precise numerical positioning — type exact room measurements.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">T</span></div><div class="sc-info"><h4 class="sc-name">Toolbar (Left)</h4><p class="sc-desc">Toggle left toolbar with all tool buttons visible.</p><span class="sc-why">Beginners need this visible — shows all available tools clearly.</span></div></div>
+        <div class="sc-card"><div class="sc-keys"><span class="key key--hot">G</span><span class="key-plus">+</span><span class="key key--hot">X</span></div><div class="sc-info"><h4 class="sc-name">Axis Locking</h4><p class="sc-desc">After G/S/R press X, Y, or Z to constrain movement to that axis.</p><span class="sc-why">Move walls exactly horizontally, scale only vertically, etc.</span></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SAVING ===== -->
+  <section id="saving">
+    <div class="container">
+      <div class="section-label">Module 06</div>
+      <h2 class="section-title">SAVING YOUR WORK</h2>
+      <p class="section-sub">Blender can crash on heavy scenes. Knowing how and when to save protects months of hard work.</p>
+
+      <div class="save-grid">
+        <div class="save-card reveal">
+          <div class="save-card__icon">💾</div>
+          <h4 class="save-card__title">Save Project File</h4>
+          <p class="save-card__desc">Saves your entire .blend — all objects, materials, lighting, camera, and settings. Your main working file.</p>
+          <div class="save-card__cmd">Ctrl + S</div>
+        </div>
+        <div class="save-card reveal">
+          <div class="save-card__icon">📁</div>
+          <h4 class="save-card__title">Save As New Version</h4>
+          <p class="save-card__desc">Save a new copy with a new name. Always version: room_v1.blend, room_v2.blend. Never overwrite your only file.</p>
+          <div class="save-card__cmd">Ctrl + Shift + S</div>
+        </div>
+        <div class="save-card reveal">
+          <div class="save-card__icon">🖼️</div>
+          <h4 class="save-card__title">Save Rendered Image</h4>
+          <p class="save-card__desc">After F12, the render is NOT auto-saved. You MUST manually save from the render window before closing.</p>
+          <div class="save-card__cmd">Render Window → Image → Save As</div>
+        </div>
+        <div class="save-card reveal">
+          <div class="save-card__icon">🔄</div>
+          <h4 class="save-card__title">Enable Auto-Save</h4>
+          <p class="save-card__desc">Blender auto-saves to a temp folder. Enable it and set interval to 2 minutes immediately after installing.</p>
+          <div class="save-card__cmd">Edit → Preferences → Save & Load</div>
+        </div>
+        <div class="save-card reveal">
+          <div class="save-card__icon">📦</div>
+          <h4 class="save-card__title">Pack External Files</h4>
+          <p class="save-card__desc">If your scene uses external textures, pack them into the .blend file so it works on any computer.</p>
+          <div class="save-card__cmd">File → External Data → Pack Resources</div>
+        </div>
+        <div class="save-card reveal">
+          <div class="save-card__icon">🗄️</div>
+          <h4 class="save-card__title">Export for Other Software</h4>
+          <p class="save-card__desc">Export your scene to FBX, OBJ, or GLTF format to use in Unreal Engine, Unity, or share with clients.</p>
+          <div class="save-card__cmd">File → Export → FBX / OBJ / GLTF</div>
+        </div>
+      </div>
+
+      <div class="info-banner info-banner--red reveal">
+        <div class="info-banner__icon">⚠️</div>
+        <div>
+          <strong>Critical Warning — Read This Once</strong>
+          <p>1. After rendering, <u>save the image manually</u> — closing the render window loses it forever.<br>
+          2. Save multiple versions (v1, v2, v3) — never overwrite your only file.<br>
+          3. Auto-Save recovery files are in <code>%TEMP%</code> on Windows or <code>/tmp/</code> on Linux/Mac.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer__inner">
+      <div class="footer__logo">Blender<span>Start</span></div>
+      <p class="footer__tagline">Your complete beginner guide to Blender · Built for students & aspiring ArchViz artists</p>
+      <div class="footer__links">
+        <a href="#syllabus">Syllabus</a>
+        <a href="#start">How to Start</a>
+        <a href="#environment">Interface</a>
+        <a href="#mouse">Mouse</a>
+        <a href="#shortcuts">Shortcuts</a>
+        <a href="#saving">Saving</a>
+        <a href="https://blender.org" target="_blank">blender.org ↗</a>
+        <a href="https://polyhaven.com" target="_blank">Polyhaven ↗</a>
+        <a href="https://blenderkit.com" target="_blank">BlenderKit ↗</a>
+      </div>
+      <p class="footer__copy">Made for BTech students learning ArchViz · Free forever</p>
+    </div>
+  </footer>
+
+  <script src="js/cursor.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

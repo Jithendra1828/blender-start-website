@@ -1,0 +1,109 @@
+/* =============================================
+   animations.css — Scroll Reveal & Transitions
+   BlenderStart Beginner Guide
+   ============================================= */
+
+/* ── Reveal on scroll ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delay for grids */
+.reveal:nth-child(1) { transition-delay: 0.00s; }
+.reveal:nth-child(2) { transition-delay: 0.07s; }
+.reveal:nth-child(3) { transition-delay: 0.14s; }
+.reveal:nth-child(4) { transition-delay: 0.21s; }
+.reveal:nth-child(5) { transition-delay: 0.28s; }
+.reveal:nth-child(6) { transition-delay: 0.35s; }
+.reveal:nth-child(7) { transition-delay: 0.42s; }
+.reveal:nth-child(8) { transition-delay: 0.49s; }
+
+/* ── Hero entrance ── */
+.hero-badge    { animation: fade-up 0.7s ease 0.1s both; }
+.hero-title    { animation: fade-up 0.7s ease 0.2s both; }
+.hero-desc     { animation: fade-up 0.7s ease 0.3s both; }
+.hero-btns     { animation: fade-up 0.7s ease 0.4s both; }
+.hero-cube-wrap { animation: fade-up 0.9s ease 0.2s both; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Step slide-in ── */
+.step.reveal {
+  transform: translateX(-24px);
+}
+.step.reveal.visible {
+  transform: translateX(0);
+}
+
+/* ── Env diagram ── */
+.env-diagram.reveal {
+  transform: scale(0.97) translateY(20px);
+}
+.env-diagram.reveal.visible {
+  transform: scale(1) translateY(0);
+}
+
+/* ── Nav scroll effect ── */
+#navbar.scrolled {
+  background: rgba(8,8,16,0.97);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+}
+
+/* ── Hover glow effects ── */
+.syl-card[data-color="orange"]:hover { box-shadow: 0 20px 60px rgba(255,107,43,0.1); }
+.syl-card[data-color="blue"]:hover   { box-shadow: 0 20px 60px rgba(61,155,255,0.1); }
+.syl-card[data-color="green"]:hover  { box-shadow: 0 20px 60px rgba(34,216,122,0.1); }
+.syl-card[data-color="purple"]:hover { box-shadow: 0 20px 60px rgba(176,107,255,0.1); }
+.syl-card[data-color="yellow"]:hover { box-shadow: 0 20px 60px rgba(255,209,102,0.1); }
+.syl-card[data-color="red"]:hover    { box-shadow: 0 20px 60px rgba(255,71,87,0.1); }
+
+/* ── Key press animation ── */
+.key:active {
+  transform: translateY(2px);
+  border-bottom-width: 1px;
+}
+
+/* ── Smooth section transitions ── */
+section { transition: background 0.3s; }
+
+/* ── Loading shimmer for stat numbers ── */
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.stat-item.visible .stat-num {
+  animation: count-up 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* ── Tab panel fade ── */
+.shortcut-panel {
+  animation: none;
+}
+.shortcut-panel.active {
+  animation: panel-appear 0.3s ease both;
+}
+@keyframes panel-appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Scrollbar styling ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--orange); }
+
+/* ── Selection color ── */
+::selection {
+  background: rgba(255,107,43,0.3);
+  color: var(--text);
+}
